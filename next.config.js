@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  experimental: {
+    esmExternals: 'loose',
+  },
+  env: {},
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

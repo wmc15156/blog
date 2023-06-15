@@ -2,26 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.w-md-editor-toolbar {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* 입력 영역 스타일 */
+.md-editor-textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 8px;
+  border: none;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  color: #333;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* 미리보기 영역 스타일 */
+.md-editor-preview {
+  padding: 8px;
+  border: none;
+  background-color: #fff;
+  font-size: 14px;
+  color: #333;
+}
+
+/* 버튼 스타일 */
+.md-editor-toolbar button {
+  margin: 0 2px;
+  padding: 6px 12px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.md-editor-toolbar button:hover {
+  background-color: #45a049;
+}
+
+.md-editor-toolbar button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
