@@ -1,5 +1,7 @@
 import { isProduction } from '@/utils/fetchWithDefaultURL';
 import { useRouter } from 'next/router';
+import FacebookLogin from '@greatsumini/react-facebook-login';
+import FacebookLoginButton from '@/components/FacebookLoginButton';
 
 const NAVER_CALLBACK_URI = isProduction ? '' : 'http://localhost:3000/naver/callback';
 const NAVER_AUTH_URL = `https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=${process.env.NAVER_CLIENT_ID}&state=12345&redirect_uri=${NAVER_CALLBACK_URI}`;
@@ -15,6 +17,8 @@ export default function SignInPage() {
       <button>
         <a href={KAKAO_AUTH_URL}>카카오로 로그인</a>
       </button>
+
+      <FacebookLoginButton />
     </div>
   );
 }
